@@ -11,10 +11,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora REV - Multa/Estorno</h1>
+        <h1>Calculadora REV - Estorno</h1>
 
         <section class="input-section">
-            <h2>Dados do Contrato e Utilização</h2>
+            <h2>Dados do contrato e utilização</h2>
             
             <div class="form-group">
                 <label for="valorContratado">Valor Contratado (R$):</label>
@@ -32,7 +32,7 @@
             </div>
             
             <div class="form-group">
-                <label for="mesesUtilizacao">Meses de Utilização:</label>
+                <label for="mesesUtilizacao">Meses de utilização:</label>
                 <select id="mesesUtilizacao">
                     </select>
             </div>
@@ -42,18 +42,18 @@
                 <label for="aplicarMulta">Cliente irá pagar multa (30%)?</label>
             </div>
             
-            <button id="calcularBtn">Calcular Estorno</button>
+            <button id="calcularBtn">Calcular estorno</button>
         </section>
 
         <section class="results-section" style="display: none;">
-            <h2>Resumo do Estorno</h2>
+            <h2>Resumo do estorno</h2>
             
             <div class="result-summary">
-                <p><strong>Valor Contratado:</strong> <span id="resumoValorContratado">R$ 0,00</span></p>
+                <p><strong>Valor contratado:</strong> <span id="resumoValorContratado">R$ 0,00</span></p>
                 <p><strong>MRR Atual:</strong> <span id="resumoMrrAtual">R$ 0,00</span></p>
-                <p><strong>Meses Utilizados:</strong> <span id="resumoMesesUtilizacao">0</span></p>
+                <p><strong>Meses utilizados:</strong> <span id="resumoMesesUtilizacao">0</span></p>
                 <p><strong>Valor (sem multa):</strong> <span id="resumoValorSemMulta">R$ 0,00</span></p>
-                <p><strong>Valor Total do Estorno:</strong> <span class="highlight-value" id="resumoValorComMulta">R$ 0,00</span></p>
+                <p><strong>Valor total do estorno:</strong> <span class="highlight-value" id="resumoValorComMulta">R$ 0,00</span></p>
             </div>
             
         </section>
