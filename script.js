@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
         mesesUtilizacaoSelect.appendChild(option);
     }
 
+    // Função auxiliar para formatar como moeda BRL
+    const formatCurrency = (value) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }).format(value);
+    };
+
     calcularBtn.addEventListener('click', () => {
         const valorContratado = parseFloat(valorContratadoInput.value.replace(',', '.'));
         const periodicidade = parseInt(periodicidadeSelect.value);
@@ -64,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
             valorTotalEstorno = 0;
         }
 
-        // Exibir resultados
-        resumoValorContratado.textContent = `R$ ${valorContratado.toFixed(2).replace('.', ',')}`;
-        resumoMrrAtual.textContent = `R$ ${mrrAtual.toFixed(2).replace('.', ',')}`;
-        resumoMesesUtilizacao.textContent = mesesUtilizacao;
-        resumoValorSemMulta.textContent = `R$ ${valorSemMulta.toFixed(2).replace('.', ',')}`;
-        resumoValorComMulta.textContent = `R$ ${valorTotalEstorno.toFixed(2).replace('.', ',')}`;
+        // Exibir resultados formatados
+        resumoValorContratado.textContent = formatCurrency(valorContratado);
+        resumoMrrAtual.textContent = formatCurrency(mrrAtual);
+        resumoMesesUtilizacao.textContent = mesesUtilizacao; // Não é um valor monetário
+        resumoValorSemMulta.textContent = formatCurrency(valorSemMulta);
+        resumoValorComMulta.textContent = formatCurrency(valorTotalEstorno);
 
         resultsSection.style.display = 'block';
     });
