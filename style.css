@@ -15,7 +15,7 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Um pouco menor, já que não tem múltiplos serviços */
+    max-width: 600px;
     width: 100%;
     margin-top: 20px;
     color: #333;
@@ -56,7 +56,36 @@ h2 {
     color: #333;
 }
 
-/* Estilo para o checkbox */
+/* Estilo para o grupo de rádio (geral, aplicado a ambos os grupos de rádio) */
+.radio-group {
+    margin-top: 20px; /* Adiciona uma margem superior para espaçamento */
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    font-weight: bold; /* Título do grupo de rádio */
+    margin-bottom: 10px; 
+}
+
+.radio-group > div { /* Cada opção de rádio (ex: Sim/Não, Multa/Estorno) */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; 
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    accent-color: #406D87; /* Cor do rádio quando selecionado */
+}
+
+.radio-group div label { /* Labels específicos dos rádios */
+    font-weight: normal; 
+    display: inline-block; 
+    margin-bottom: 0;
+}
+
 .checkbox-group {
     display: flex; /* Para alinhar o checkbox com o texto */
     align-items: center;
@@ -66,13 +95,13 @@ h2 {
 
 .checkbox-group input[type="checkbox"] {
     margin-right: 10px;
-    width: 20px; /* Ajuste o tamanho do checkbox */
+    width: 20px;
     height: 20px;
     accent-color: #406D87; /* Cor do checkbox quando marcado */
 }
 
 .checkbox-group label {
-    display: inline; /* Para o texto ficar ao lado do checkbox */
+    display: inline;
     margin-bottom: 0;
     font-weight: normal;
 }
@@ -124,7 +153,7 @@ button:hover {
 .highlight-value {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #99BC29; /* Cor secundária para o valor final do estorno */
+    color: #99BC29; /* Cor secundária para o valor final do estorno/multa */
 }
 
 /* Responsividade básica */
